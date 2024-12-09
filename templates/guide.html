@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Bystander Guide</title>
   <link rel="stylesheet" href="{% static '/css/styles.css' %}">
 </head>
 <body class="light-mode">
   <div class="dashboard">
     <aside class="sidebar">
-      <div class="sidebar-item"><a href="{% url 'dashboard' %}">Chat</a></div>
-      <div class="sidebar-item"><a href="{% url 'support' %}">Mental Support</a></div>
-      <div class="sidebar-item"><a href="{% url 'cbt' %}">CBT</a></div>
-      <div class="sidebar-item"><a href="{% url 'guide' %}">Bystander Guidance</a></div>
-      <div class="sidebar-item"><a href="{% url 'resources' %}">Resources</a></div>
+        <div class="sidebar-item"><a href="{% url 'dashboard' %}">Chat</a></div>
+        <div class="sidebar-item"><a href="{% url 'support' %}">Mental Support</a></div>
+        <div class="sidebar-item"><a href="{% url 'cbt' %}">CBT</a></div>
+        <div class="sidebar-item"><a href="{% url 'guide' %}">Bystander Guidance</a></div>
+        <div class="sidebar-item"><a href="{% url 'resources' %}">Resources</a></div>
       <div class="sidebar-buttons">
         <button id="cursor-toggle" class="cursor-btn">Highlight Cursor</button>
         <label class="switch">
@@ -27,7 +27,7 @@
     <main class="main-content">
       <div class="content-body">
         <h1 class="product-name">Sakh.ai</h1>
-        <h5 class="study-assistant">Study Assistant</h5>  
+        <h5 class="study-assistant">Bystander Guidance</h5>  
         <div class="chat-container">
           <div id="chat-display" class="chat-display">
             <!-- Chat messages will appear here -->
@@ -49,6 +49,6 @@
   </div>
 
   <div class="cursor-highlight-circle"></div> <!-- Cursor Highlight Circle -->
-  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/guide.js' %}"></script>
 </body>
 </html>

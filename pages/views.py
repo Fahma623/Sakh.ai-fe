@@ -22,6 +22,14 @@ def support(request):
     return render(request, 'mentalsupport.html')
 
 
+def resources(request):
+    return render(request, 'resources.html')
+
+def guide(request):
+    return render(request, 'guide.html')
+    
+def cbt(request):
+    return render(request, 'cbt.html')
 # Custom Login view
 class CustomLoginView(LoginView):
     template_name = 'pages/login.html'  # Specify the template for the login page

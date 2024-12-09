@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Mental Support</title>
   <link rel="stylesheet" href="{% static '/css/styles.css' %}">
 </head>
 <body class="light-mode">
   <div class="dashboard">
     <aside class="sidebar">
       <div class="sidebar-item"><a href="{% url 'dashboard' %}">Chat</a></div>
-      <div class="sidebar-item">Mental Support</div>
-      <div class="sidebar-item">CBT</div>
-      <div class="sidebar-item">Bystander Guidance</div>
-      <div class="sidebar-item">Resources</div>
+      <div class="sidebar-item"><a href="{% url 'support' %}">Mental Support</a></div>
+      <div class="sidebar-item"><a href="{% url 'cbt' %}">CBT</a></div>
+      <div class="sidebar-item"><a href="{% url 'guide' %}">Bystander Guidance</a></div>
+      <div class="sidebar-item"><a href="{% url 'resources' %}">Resources</a></div>
       <div class="sidebar-buttons">
         <button id="cursor-toggle" class="cursor-btn">Highlight Cursor</button>
         <label class="switch">
@@ -29,10 +29,15 @@
         <h1 class="product-name">Sakh.ai</h1>
         <h5 class="study-assistant">Mental Support</h5>  
         <div class="chat-container">
-          <textarea class="chat-textarea" placeholder="Type a message..."></textarea>
-          <button class="send-btn">
-            &#8593; <!-- Upwards arrow -->
-          </button>
+          <div id="chat-display" class="chat-display">
+            <!-- Chat messages will appear here -->
+          </div>
+          <div class="chat-input-container">
+            <textarea class="chat-textarea" id="chat-input" placeholder="Type a message..."></textarea>
+            <button class="send-btn" id="send-button">
+              &#8593; <!-- Upwards arrow -->
+            </button>
+          </div>
         </div>
         <div class="action-buttons">
           <button class="action-btn summarize-btn">Summarize</button>
@@ -44,8 +49,6 @@
   </div>
 
   <div class="cursor-highlight-circle"></div> <!-- Cursor Highlight Circle -->
-  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/mental.js' %}"></script>
 </body>
 </html>
-
-

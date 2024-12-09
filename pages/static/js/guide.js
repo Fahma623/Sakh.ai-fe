@@ -33,7 +33,7 @@ async function sendMessage(userMessage) {
 
   try {
     console.log('Sending message:', userMessage);
-    const response = await fetch('https://5001-01jeb6yxm51r5jn8khvcj3gr7k.cloudspaces.litng.ai/chatbot', {
+    const response = await fetch('https://5001-01jeb6yxm51r5jn8khvcj3gr7k.cloudspaces.litng.ai/guidance', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ chat_history: chatHistory, input_data: userMessage })
