@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body class="light-mode">
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="sidebar-item"><a href="{% url 'dashboard' %}">Chat</a></div>
+        <div class="sidebar-item"><a href="{% url 'support' %}">Mental Support</a></div>
+        <div class="sidebar-item"><a href="{% url 'cbt' %}">CBT</a></div>
+        <div class="sidebar-item"><a href="{% url 'guide' %}">Bystander Guidance</a></div>
+        <div class="sidebar-item"><a href="{% url 'resources' %}">Resources</a></div>
+        <div class="sidebar-item"><a href="{% url 'flash' %}">Flashcard</a></div>
+        <div class="sidebar-buttons">
+          <button id="cursor-toggle" class="cursor-btn">Highlight Cursor</button>
+          <label class="switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider"></span>
+          </label>
+          <label for="mode-toggle" class="mode-label">Dark Mode</label>
+        </div>
+      </aside>
+      <main class="main-content">
+        <div class="content-body">
+          <h1 class="product-name">Sakh.ai</h1>
+          <h5 class="study-assistant">Flash Card</h5> 
+
+<div class="flashcard" onclick="toggleFlashcard(this)">
+    <div class="flashcard-inner">
+        <div class="flashcard-front">
+            <h2 id="flashcardTitle">Loading...</h2>
+        </div>
+        <div class="flashcard-back">
+            <p id="flashcardDescription">Loading...</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="cursor-highlight-circle"></div> <!-- Cursor Highlight Circle -->
+  <script src="{% static 'js/flashcard.js' %}"></script>
+</body>
+</html>

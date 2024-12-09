@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import signup, CustomLoginView, dashboard, support, cbt, guide, resources
+from .views import signup, CustomLoginView, dashboard, support, cbt, guide, resources, flash
 
 urlpatterns = [
     path('signup/', signup, name='signup'),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('guide/', guide, name='guide'),
     path('cbt/', cbt, name='cbt'),
     path('resources/', resources, name='resources'),
+    path('flash/', flash, name='flash'),
 ]

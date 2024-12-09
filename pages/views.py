@@ -30,6 +30,9 @@ def guide(request):
     
 def cbt(request):
     return render(request, 'cbt.html')
+
+def flash(request):
+    return render(request, 'flashcard.html')
 # Custom Login view
 class CustomLoginView(LoginView):
     template_name = 'pages/login.html'  # Specify the template for the login page
