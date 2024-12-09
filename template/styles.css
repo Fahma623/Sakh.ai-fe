@@ -1,0 +1,302 @@
+/* General Styles for the Product Name */
+.product-name {
+    font-family: 'Arial', sans-serif; /* You can use a more stylish font if needed */
+    font-size: 36px;  /* Size for the product name */
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; /* Optional: Make it uppercase for style */
+    background: linear-gradient(135deg, #9c4dcc 30%, #d1a1f1 80%); /* Softer gradient from dark to light purple */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    background-clip: text; /* Standard version */
+    color: transparent; /* Make the text itself transparent to show the gradient */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better contrast */
+  }
+
+/* Styling for Study Assistant */
+.study-assistant {
+    font-family: 'Arial', sans-serif; /* Matching font with the product name */
+    font-size: 20px;  /* Size for the subheading */
+    font-weight: normal; /* Light weight for the subheading */
+    text-align: center;
+    margin-top: 5px; /* Space between product name and subheading */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Optional: Make it uppercase */
+  }
+  
+  /* Light Mode Styles */
+  body.light-mode .study-assistant {
+    color: black; /* Black color for light mode */
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode .study-assistant {
+    color: white; /* White color for dark mode */
+  }
+  
+  
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.7s, color 0.7s;
+  }
+  
+  body.light-mode {
+    background-color: #f5f5f5;
+    color: #000;
+  }
+  
+  body.dark-mode {
+    background: linear-gradient(41deg, rgb(0, 0, 0) 8.49%, rgb(58, 60, 61) 91.51%);
+    color: #fff;
+}
+
+  
+  .dashboard {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: background-color 0.7s, color 0.7s;
+  }
+  
+  body.light-mode .sidebar {
+    background: linear-gradient(205deg, rgb(187, 139, 255) 8.49%, rgb(117, 246, 255) 91.51%);
+  }
+  
+  body.dark-mode .sidebar {
+    background-color: rgb(180, 90, 255); /* Lavender color */
+  }
+  
+  .sidebar-item {
+    background-color: white;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode .sidebar-item {
+    background-color: #444;
+    color: white;
+  }
+  
+  .sidebar-item:hover {
+    color: rgb(180, 90, 255);
+  }
+  
+  .sidebar-buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cursor-btn {
+    background: linear-gradient(135deg, rgb(180, 90, 255), rgb(220, 180, 255));
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .cursor-btn:hover {
+    background: linear-gradient(135deg, rgb(160, 70, 245), rgb(200, 150, 245));
+    transform: scale(1.05);
+  }
+  
+  /* Switch Toggle */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #444;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .mode-label {
+    margin-left: 10px;
+    color: black;
+  }
+  
+  /* Main Content */
+  .main-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Chat Styles */
+  .chat-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .chat-textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+  }
+  
+ /* Define distinct background colors */
+:root {
+    --input-bg-dark: #444; /* A slightly lighter dark color than the body */
+    --body-bg-dark: #1e1e2f; /* Dark background for the body */
+  }
+  
+  body.dark-mode {
+    background: var(--body-bg-dark);  /* Apply the dark mode background */
+    color: #fff;
+  }
+  
+  body.dark-mode .chat-textarea {
+    background-color: var(--input-bg-dark);  /* Apply the distinct background for textarea */
+    color: white;
+    border: 1px solid #333333;
+  }
+  
+  
+  .send-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00bcd4;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  body.dark-mode .send-btn {
+    background-color: rgb(180, 90, 255);
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .action-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .action-btn.summarize-btn {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: white;
+  }
+  
+  .action-btn.tts-btn {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+  }
+  
+  .action-btn.audio-btn {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    color: white;
+  }
+  
+  .action-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Highlight Cursor Circle */
+  .cursor-highlight-circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(180, 90, 255, 0.8);
+    border-radius: 50%;
+    background: rgba(200, 150, 255, 0.3);
+    position: fixed;
+    pointer-events: none;
+    display: none;
+    z-index: 9999;
+  }
+  
+  body.cursor-highlight-enabled .cursor-highlight-circle {
+    display: block;
+  }
+  
