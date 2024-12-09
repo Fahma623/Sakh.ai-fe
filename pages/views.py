@@ -15,6 +15,9 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'pages/signup.html', {'form': form})
 
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
 # Custom Login view
 class CustomLoginView(LoginView):
     template_name = 'pages/login.html'  # Specify the template for the login page
