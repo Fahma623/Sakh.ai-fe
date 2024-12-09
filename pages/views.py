@@ -18,6 +18,10 @@ def signup(request):
 def dashboard(request):
     return render(request, 'dashboard.html')
 
+def support(request):
+    return render(request, 'mentalsupport.html')
+
+
 # Custom Login view
 class CustomLoginView(LoginView):
     template_name = 'pages/login.html'  # Specify the template for the login page
