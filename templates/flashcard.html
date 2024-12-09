@@ -9,40 +9,68 @@
 </head>
 <body class="light-mode">
     <div class="dashboard">
-      <aside class="sidebar">
-        <div class="sidebar-item"><a href="{% url 'dashboard' %}">Chat</a></div>
-        <div class="sidebar-item"><a href="{% url 'support' %}">Mental Support</a></div>
-        <div class="sidebar-item"><a href="{% url 'cbt' %}">CBT</a></div>
-        <div class="sidebar-item"><a href="{% url 'guide' %}">Bystander Guidance</a></div>
-        <div class="sidebar-item"><a href="{% url 'resources' %}">Resources</a></div>
-        <div class="sidebar-item"><a href="{% url 'flash' %}">Flashcard</a></div>
-        <div class="sidebar-buttons">
-          <button id="cursor-toggle" class="cursor-btn">Highlight Cursor</button>
-          <label class="switch">
-            <input type="checkbox" id="mode-toggle">
-            <span class="slider"></span>
-          </label>
-          <label for="mode-toggle" class="mode-label">Dark Mode</label>
-        </div>
-      </aside>
-      <main class="main-content">
-        <div class="content-body">
-          <h1 class="product-name">Sakh.ai</h1>
-          <h5 class="study-assistant">Flash Card</h5> 
+        <aside class="sidebar">
+            <div class="sidebar-item"><a href="{% url 'dashboard' %}">Chat</a></div>
+            <div class="sidebar-item"><a href="{% url 'support' %}">Mental Support</a></div>
+            <div class="sidebar-item"><a href="{% url 'cbt' %}">CBT</a></div>
+            <div class="sidebar-item"><a href="{% url 'guide' %}">Bystander Guidance</a></div>
+            <div class="sidebar-item"><a href="{% url 'resources' %}">Resources</a></div>
+            <div class="sidebar-item"><a href="{% url 'flash' %}">Flashcard</a></div>
+            <div class="sidebar-buttons">
+                <button id="cursor-toggle" class="cursor-btn">Highlight Cursor</button>
+                <label class="switch">
+                    <input type="checkbox" id="mode-toggle">
+                    <span class="slider"></span>
+                </label>
+                <label for="mode-toggle" class="mode-label">Dark Mode</label>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div class="content-body">
+                <h1 class="product-name">Sakh.ai</h1>
+                <h5 class="study-assistant">Flash Card</h5> 
 
-<div class="flashcard" onclick="toggleFlashcard(this)">
-    <div class="flashcard-inner">
-        <div class="flashcard-front">
-            <h2 id="flashcardTitle">Loading...</h2>
-        </div>
-        <div class="flashcard-back">
-            <p id="flashcardDescription">Loading...</p>
-        </div>
+                <div class="flashcard-container">
+                    <div class="flashcard" onclick="toggleFlashcard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h2 id="flashcardTitle1">Loading...</h2>
+                            </div>
+                            <div class="flashcard-back">
+                                <p id="flashcardDescription1">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flashcard" onclick="toggleFlashcard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h2 id="flashcardTitle2">Loading...</h2>
+                            </div>
+                            <div class="flashcard-back">
+                                <p id="flashcardDescription2">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flashcard" onclick="toggleFlashcard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h2 id="flashcardTitle3">Loading...</h2>
+                            </div>
+                            <div class="flashcard-back">
+                                <p id="flashcardDescription3">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="shuffle-button" onclick="shuffleFlashcards()">Shuffle</button>
+                </div>
+
+                <div class="cursor-highlight-circle"></div> <!-- Cursor Highlight Circle -->
+            </div>
+        </main>
     </div>
-</div>
-
-
-<div class="cursor-highlight-circle"></div> <!-- Cursor Highlight Circle -->
-  <script src="{% static 'js/flashcard.js' %}"></script>
+    <script src="{% static 'js/flashcard.js' %}"></script>
 </body>
 </html>

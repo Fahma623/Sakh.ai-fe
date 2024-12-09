@@ -468,7 +468,9 @@ body.dark-mode .info-panel a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ensure the container takes the full viewport height */
+  flex-wrap: wrap; /* Allow cards to wrap to the next row */
+  gap: 20px; /* Gap between cards */
+  margin-top: 20px;
 }
 
 .flashcard {
@@ -518,4 +520,14 @@ body.dark-mode .info-panel a:hover {
 
 .flashcard.flipped .flashcard-inner {
   transform: rotateY(180deg);
+}
+
+.shuffle-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(180, 90, 255);
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
 }
